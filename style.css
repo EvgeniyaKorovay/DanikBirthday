@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+  display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+#container {
+    height: 400px;
+    width: 1200px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid darkgreen;
+}
+
+#container #potter {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+}
+
+#container #potter img {
+    width: 70px;
+    height: 70px;
+}
+
+.potterActive {
+    animation: animatePotter 0.5s linear infinite;
+}
+
+@keyframes animatePotter {
+    0%, 100% {
+        bottom: 28px;
+    }
+   45%, 55%{
+       bottom: 160px;
+    }
+}
+
+#container #wood {
+    width: 125px;
+    height: 80px;
+    position: absolute;
+    bottom: 20px;
+    right: -40px;
+}
+
+#container #wood img {
+    width: 125px;
+    height: 80px;
+}
+
+.woodMov {
+    animation: woodMov 1s infinite linear;
+}
+
+@keyframes woodMov {
+    0% {
+        right: -125px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+#container #volendemort {
+    width: 125px;
+    height: 80px;
+    position: absolute;
+    bottom: 150px;
+    right: -300px;
+}
+
+#container #volendemort img {
+    width: 125px;
+    height: 80px;
+}
+
+.volandMov {
+    animation: volandMov 3.5s infinite linear;
+}
+
+@keyframes volandMov {
+    0% {
+        right: -300px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+#container #balloons {
+    height: 80px;
+    width: 1200px;
+    border-radius: 40px;
+    position: absolute;
+    top: 30px;
+}
+
+#container #balloons img {
+    height: 80px;
+    width: 200px;
+    position: absolute;
+    left: -2000px;
+    animation: none;
+}
+
+@keyframes balloonsAnimate  {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+#score {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+#happyBrithday {
+    display: none;
+    font-size: 35px;
+    position: absolute;
+    left: calc(50% - 181px);
+    top: calc(50% - 40px);
+    width: 362px;
+    height: 80px;
+    color: #525252;
+}
